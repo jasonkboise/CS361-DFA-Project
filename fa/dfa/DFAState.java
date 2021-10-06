@@ -36,6 +36,10 @@ public class DFAState extends fa.State {
         return this.finalState;
     }
 
+    public String getName() {
+        return this.name;
+    }
+
     public DFAState checkTransition(char onSymb) {
         return transitions.get(onSymb);
     }
