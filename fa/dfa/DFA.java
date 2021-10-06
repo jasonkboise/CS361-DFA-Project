@@ -8,14 +8,18 @@ public class DFA implements DFAInterface{
 
     private Set<DFAState> states;
     private Set<Character> alphabet;
+    private DFAState startState;
 
     public DFA() {
         states = new HashSet<DFAState>();
         alphabet = new HashSet<Character>();
+        this.startState = null;
     }
     @Override
     public void addStartState(String name) {
-
+        DFAState newState = new DFAState(name);
+        newState.setInitial();
+        startState = newState;
         
     }
     @Override
@@ -45,14 +49,14 @@ public class DFA implements DFAInterface{
     }
     @Override
     public State getStartState() {
-        return null;
+        return this.startState;
     }
     @Override
     public Set<Character> getABC() {
         return null;
     }
     @Override
-    public fa.dfa.State getToState(DFAState from, char onSymb) {
+    public fa.dfa.DFAState getToState(DFAState from, char onSymb) {
         return null;
     }
     @Override

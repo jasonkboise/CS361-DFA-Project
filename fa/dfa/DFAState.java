@@ -20,10 +20,6 @@ public class DFAState extends fa.State {
         transitions.put(onSymb, toState);
     }
 
-    public Map<Character, DFAState> getTransitions() {
-        return transitions;
-    }
-
     public void setInitial() {
         this.initialState = true;
     }
