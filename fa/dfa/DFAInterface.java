@@ -37,6 +37,6 @@ public interface DFAInterface extends FAInterface{
 	 * @param onSymb the label of the transition
 	 * @return the sink state.
 	 */
-	public abstract State getToState(DFAState from, char onSymb);
+	public abstract DFAState getToState(DFAState from, char onSymb);
 
 }

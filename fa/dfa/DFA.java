@@ -7,9 +7,11 @@ import fa.State;
 public class DFA implements DFAInterface{
 
     private Set<DFAState> states;
+    private Set<Character> alphabet;
 
     public DFA() {
         states = new HashSet<DFAState>();
+        alphabet = new HashSet<Character>();
     }
     @Override
     public void addStartState(String name) {
@@ -30,6 +32,7 @@ public class DFA implements DFAInterface{
     }
     @Override
     public void addTransition(String fromState, char onSymb, String toState) {
+        alphabet.add(onSymb);
         
     }
     @Override

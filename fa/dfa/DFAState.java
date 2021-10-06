@@ -1,27 +1,27 @@
 package fa.dfa;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.HashMap;
+import java.util.Map;
 
 public class DFAState extends fa.State {
     private boolean finalState;
     private boolean initialState;
-    private Set<DFAState> transitions;
+    private Map<Character, DFAState> transitions;
 
 
     public DFAState(String name) {
         this.name = name;
         this.finalState = false;
         this.initialState = false;
-        this.transitions = new HashSet<DFAState>();
+        this.transitions = new HashMap<Character, DFAState>();
     }
 
-    public void addTransition(DFAState transition) {
-        transitions.add(transition);
+    public void addTransition(char onSymb, DFAState toState) {
+        transitions.put(onSymb, toState);
     }
 
-    public Set<DFAState> getTransitions() {
-        return null;
+    public Map<Character, DFAState> getTransitions() {
+        return transitions;
     }
 
     public void setInitial() {
@@ -32,13 +32,16 @@ public class DFAState extends fa.State {
         this.finalState = true;
     }
 
-    public boolean checkTransition(DFAState check) {
-        if (transitions.contains(check)) {
-            return true;
-        }
-        else {
-            return false;
-        }
+    public boolean checkInitial() {
+        return this.initialState;
+    }
+
+    public boolean checkFinal() {
+        return this.finalState;
+    }
+
+    public DFAState checkTransition(char onSymb) {
+        return transitions.get(onSymb);
     }
 
 }
