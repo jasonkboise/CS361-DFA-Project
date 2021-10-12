@@ -36,6 +36,8 @@ public class DFAState extends fa.State {
         return this.finalState;
     }
 
+    public Map<Character, DFAState> getTransitions() {return this.transitions;}
+
     public String getName() {
         return this.name;
     }

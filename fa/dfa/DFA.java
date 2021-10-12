@@ -102,4 +102,40 @@ public class DFA implements DFAInterface{
         
         return false;
     }
+
+
+    public String toString() {
+        String output = "";
+        output += "Q = " + this.states + " \n";
+        output += "Sigma = " + this.getABC() + " \n";
+        output += "delta = \n";
+        output += "\t\t";
+        Set<Character> abc = this.getABC();
+        Iterator<Character> abcIter = abc.iterator();
+        Set<DFAState> states = this.states;
+        Iterator<DFAState> stateIter = states.iterator();
+
+        for (int i = 0; i < this.getABC().size(); i++) {
+            output += abcIter.next() + "\t";
+        }
+        output += "\n";
+
+        abcIter = abc.iterator();
+
+        for (int i = 0; i < this.states.size(); i++) {
+            DFAState current = stateIter.next();
+            output += "\t" + current + "\t";
+            for (int j = 0; j < this.getABC().size(); j++) {
+                output += current.checkTransition(abcIter.next()).getName() + "\t";
+            }
+            output += "\n";
+            abcIter = abc.iterator();
+        }
+
+        output += "q0 = " + this.startState + "\n";
+        output += "F = " + this.finalStates + " \n";
+
+
+        return output;
+    }
 }
