@@ -5,7 +5,7 @@ import java.util.Map;
 
 /**
  * This is the DFA state class which includes the characteristics
- * of each DFA. The most notable method of this class is the
+ * of each DFA state. The most notable method of this class is the
  * addTransition method which stores a map of the different
  * transitions for this state. 
  * 
