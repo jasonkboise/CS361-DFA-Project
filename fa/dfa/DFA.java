@@ -2,7 +2,6 @@ package fa.dfa;
 
 import java.util.HashSet;
 import java.util.Iterator;
-import java.util.Scanner;
 import java.util.Set;
 import fa.State;
 
@@ -90,7 +89,17 @@ public class DFA implements DFAInterface{
     }
     @Override
     public boolean accepts(String s) {
-        Scanner scan = new Scanner(s);
+        DFAState checkAcc = this.startState;
+        
+        for (int i = 0; i < s.trim().length(); i ++) {
+           checkAcc = checkAcc.checkTransition(s.charAt(i));
+        }
+        
+        if (finalStates.contains(checkAcc))
+            return true;
+
+        
+        
         return false;
     }
 }
