@@ -51,10 +51,10 @@ public class DFA implements DFAInterface{
         DFAState to = null;
         while (stateIterator.hasNext()) {
             DFAState curr = stateIterator.next();
-            if (curr.getName() == fromState) {
+            if (curr.getName().equals(fromState)) {
                 from = curr;
             }
-            if (curr.getName() == toState) {
+            if (curr.getName().equals(toState)) {
                 to = curr;
             }
         }
