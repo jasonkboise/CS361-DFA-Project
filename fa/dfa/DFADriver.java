@@ -10,7 +10,7 @@ import java.util.StringTokenizer;
  * The class reads the input file and instantiates a DFA from it.
  * Next it reads a string from the same file and prints "yes" if the string 
  * is in the DFA's language or "not if the string is not in the DFA's language.
- * @author elenasherman
+ * @authors Jason
  *
  */
 public class DFADriver {

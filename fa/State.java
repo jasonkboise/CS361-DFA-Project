@@ -16,6 +16,10 @@ public abstract class State {
 		return name;
 	}
 	
+	
+	/** 
+	 * @return String
+	 */
 	@Override
 	public String toString(){
 		return name;
