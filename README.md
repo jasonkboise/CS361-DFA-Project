@@ -17,6 +17,8 @@ to see if the string is valid or not.
 
 ## Compiling and Using
 
+First compile the program: javac fa/dfa/DFADriver.java
+
 To run this program in onyx go to the folder that the project is located in
 and type: java fa.dfa.DFADriver ./tests/"yourtesthere" 
 
