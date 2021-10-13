@@ -17,10 +17,10 @@ to see if the string is valid or not.
 
 ## Compiling and Using
 
-This section should tell the user how to compile your code.  It is
-also appropriate to instruct the user how to use your code. Does your
-program require user input? If so, what does your user need to know
-about it to use it as quickly as possible?
+To run this program in onyx go to the folder that the project is located in
+and type: java fa.dfa.DFADriver ./tests/"yourtesthere" 
+
+example: java fa.dfa.DFADriver ./tests/p1tc1.txt
 
 ## Discussion
 
