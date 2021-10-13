@@ -1,6 +1,6 @@
-# Project X: Project Name
+# Project 1: DFA String Tester
 
-* Author: Jason, Kuphaldt
+* Author: Jason, Kuphaldt, Connor Jackson | Section 002
 * Class: CS361 
 * Semester: Fall 2021
 
